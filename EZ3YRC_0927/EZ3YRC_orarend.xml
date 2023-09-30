@@ -1,114 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<YD11NL_orarend>
+<EZ3YRC_orarend>
     <ora id="1" tipus="elmélet">
-        <targy>Web technológiák 1</targy>
+        <targy> WEB technológiák </targy>
         <idopont>
-            <nap>hétfő</nap>
-            <tol>14</tol>
-            <ig>16</ig>
+            <nap> hétfő </nap>
+            <tol> 14:00 </tol>
+            <ig> 15:30 </ig>
         </idopont>
-        <helyszin>XXX. előadó</helyszin>
-        <oktato>Agárdi Anita</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> XXX. előadó </helyszin>
+        <oktato> Agárdi Anita </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
     <ora id="2" tipus="gyakorlat">
-        <targy>Web technológiák 1</targy>
+        <targy> WEB technológiák </targy>
         <idopont>
-            <nap>hétfő</nap>
-            <tol>16</tol>
-            <ig>18</ig>
+            <nap> hétfő </nap>
+            <tol> 16:00 </tol>
+            <ig> 17:30 </ig>
         </idopont>
-        <helyszin>Inf. 202</helyszin>
-        <oktato>Agárdi Anita</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> In/202 In II. em. 202 </helyszin>
+        <oktato> Agárdi Anita </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
     <ora id="3" tipus="elmélet">
-        <targy>Mesterséges intelligencia</targy>
+        <targy> Mesterséges Intelligencia </targy>
         <idopont>
-            <nap>kedd</nap>
-            <tol>10</tol>
-            <ig>12</ig>
+            <nap> kedd </nap>
+            <tol> 10:00 </tol>
+            <ig> 11:30 </ig>
         </idopont>
-        <helyszin>XXXII. előadó</helyszin>
-        <oktato>Kunné Dr. Tamás Judit</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> XXXII. előadó </helyszin>
+        <oktato> Kunné Dr. Tamás Judit </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
     <ora id="4" tipus="elmélet">
-        <targy>Adatkezelés XML-ben</targy>
+        <targy> Adatkezelés XML-ben </targy>
         <idopont>
-            <nap>kedd</nap>
-            <tol>12</tol>
-            <ig>14</ig>
+            <nap> kedd </nap>
+            <tol> 12:00 </tol>
+            <ig> 13:30 </ig>
         </idopont>
-        <helyszin>XXXII. előadó</helyszin>
-        <oktato>Dr. Bednarik László</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> XXXII. előadó </helyszin>
+        <oktato> Dr Bednarik László </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
     <ora id="5" tipus="elmélet">
-        <targy>Algoritmusok és vizsgálatuk</targy>
+        <targy> Algoritmusok és vizsgálatuk </targy>
         <idopont>
-            <nap>kedd</nap>
-            <tol>14</tol>
-            <ig>16</ig>
+            <nap> kedd </nap>
+            <tol> 14:00 </tol>
+            <ig> 15:30 </ig>
         </idopont>
-        <helyszin>320. előadó</helyszin>
-        <oktato>Házy Attila</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> 320. előadó </helyszin>
+        <oktato> Dr. Házy Attila </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
     <ora id="6" tipus="gyakorlat">
-        <targy>Algoritmusok és vizsgálatuk</targy>
+        <targy> Algoritmusok és vizsgálatuk </targy>
         <idopont>
-            <nap>kedd</nap>
-            <tol>16</tol>
-            <ig>18</ig>
+            <nap> kedd </nap>
+            <tol> 16:00 </tol>
+            <ig> 17:30 </ig>
         </idopont>
-        <helyszin>320. előadó</helyszin>
-        <oktato>Házy Attila</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> 320. előadó </helyszin>
+        <oktato> Dr. Házy Attila </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
+
+    <ora id="7" tipus="gyakorlat">
+        <targy> Adatkezelés XML-ben </targy>
+        <idopont>
+            <nap> szerda </nap>
+            <tol> 12:00 </tol>
+            <ig> 13:30 </ig>
+        </idopont>
+        <helyszin> Info 103. </helyszin>
+        <oktato> Dr Bednarik László </oktato>
+        <szak> Programtervező Informatikus </szak>
+    </ora>
+
+    <ora id="8" tipus="előadás">
+        <targy> Vállalati információs rendszerek fejlesztése </targy>
+        <idopont>
+            <nap> szerda </nap>
+            <tol> 14:00 </tol>
+            <ig> 15:30 </ig>
+        </idopont>
+        <helyszin> Info 101. </helyszin>
+        <oktato> Dr Sasvári Péter László </oktato>
+        <szak> Programtervező Informatikus </szak>
+    </ora>
+
     <ora id="9" tipus="gyakorlat">
-        <targy>Adatkezelés XML-ben</targy>
+        <targy> Vállalati információs rendszerek fejlesztése </targy>
         <idopont>
-            <nap>szerda</nap>
-            <tol>12</tol>
-            <ig>14</ig>
+            <nap> szerda </nap>
+            <tol> 18:00 </tol>
+            <ig> 19:30 </ig>
         </idopont>
-        <helyszin>Inf. 101</helyszin>
-        <oktato>Dr. Bednarik László</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> Info 103. </helyszin>
+        <oktato> Dr Sasvári Péter László </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
-    <ora id="10" tipus="elmélet">
-        <targy>Vállalati információs rendszerek fejlesztése</targy>
+
+    <ora id="10" tipus="gyakorlat">
+        <targy> Mesterséges Intelligencia </targy>
         <idopont>
-            <nap>szerda</nap>
-            <tol>14</tol>
-            <ig>16</ig>
+            <nap> csütörtök </nap>
+            <tol> 10:00 </tol>
+            <ig> 11:30 </ig>
         </idopont>
-        <helyszin>Inf. 101</helyszin>
-        <oktato>Dr Sasvári Péter László</oktato>
-        <szak>G3BP1</szak>
+        <helyszin> I. előadó </helyszin>
+        <oktato> Fazekas Levente </oktato>
+        <szak> Programtervező Informatikus </szak>
     </ora>
-    <ora id="11" tipus="gyakorlat">
-        <targy>Vállalti információs rendszerek fejlesztése</targy>
-        <idopont>
-            <nap>szerda</nap>
-            <tol>18</tol>
-            <ig>20</ig>
-        </idopont>
-        <helyszin>Inf. 15</helyszin>
-        <oktato>Kulcsárné Dr. Forrai Mónika</oktato>
-        <szak>G3BP1</szak>
-    </ora>
-    <ora id="12" tipus="gyakorlat">
-        <targy>Mesterséges intelligencia</targy>
-        <idopont>
-            <nap>csütörtök</nap>
-            <tol>10</tol>
-            <ig>12</ig>
-        </idopont>
-        <helyszin>I. előadó</helyszin>
-        <oktato>Fazekas Levente</oktato>
-        <szak>G3BP1</szak>
-    </ora>
-</YD11NL_orarend>
+</EZ3YRC_orarend>

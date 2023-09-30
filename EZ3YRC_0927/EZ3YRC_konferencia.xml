@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<konferencia>
+    <cim> Adatkezelés XML-ben </cim>
+    <hallgatok>
+        <hallgato>
+            <nev> Minta János </nev>    
+            <lakcim> 3524. Miskolc, Domb utca 1 </lakcim>
+        </hallgato>    
+    </hallgatok>
+    <helyszin> 3515. Miskolc, Egyetem út 1 </helyszin>
+    <eloado>
+        <nev> Dr. Bednarik László </nev>
+        <lakcim> 3524. Miskolc, Domb utca 2 </lakcim>    
+        <adoszam> 84935142 </adoszam>
+    </eloado>
+    <datum> 2023.09.30 </datum>
+</konferencia>
