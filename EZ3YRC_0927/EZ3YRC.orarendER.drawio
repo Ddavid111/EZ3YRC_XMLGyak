@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2023-09-30T13:30:05.306Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" version="22.0.0" etag="82K3_9bYdac2rREAwoUA" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-30T13:33:13.867Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="WaqVyjCGtVLtMxusRxUa" version="22.0.0" type="github">
   <diagram name="1 oldal" id="J0RhJsYHLlQuwJroKjkV">
-    <mxGraphModel>
+    <mxGraphModel dx="472" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="emb7kYfoe4Xrb6C7neZM-1" value="órarend" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="emb7kYfoe4Xrb6C7neZM-2" value="óra" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
