@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE EZ3YRC_modell SYSTEM "EZ3YRC_ertodtd.dtd">
+<EZ3YRC_modell>
+    <A a="a1">
+        <b>
+            <x></x>
+            <y></y>
+        </b>
+        <b>
+            <x></x>
+            <y></y>
+        </b>
+        <c>
+            <d></d>
+            <e></e>
+        </c>
+    </A>
+    <B a="b1" c="c1">
+        <b>
+            <x></x>
+            <y></y>
+        </b>
+    </B>
+    <C a="c1">
+        <b></b>
+    </C>
+    <AB aref="a1" bref="b1">
+        <c></c>
+    </AB>
+</EZ3YRC_modell>
