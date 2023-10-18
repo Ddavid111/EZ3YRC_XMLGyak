@@ -1,9 +1,171 @@
-<mxfile host="app.diagrams.net" modified="2023-10-18T10:10:25.480Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" version="22.0.4" etag="5Pvs7gKwrAkdmVLf6_dS" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-18T11:09:40.862Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="M-OOaouAzUhzuuSV8b8z" version="22.0.4" type="github">
   <diagram name="1 oldal" id="7Gm-jjUQWlPTQZy7TqSw">
-    <mxGraphModel>
+    <mxGraphModel dx="1896" dy="1739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-1" value="Fesztivál_EZ3YRC" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-2" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-3" value="helyszín" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-4" value="év" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-5" value="FESZ_ID" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="480" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-6" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-453" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-7" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-8" value="bevétel" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-9" value="FEL_ID" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="480" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-14" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-340" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-13" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-14">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-11" value="Fesztivál" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-14">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-18" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1161" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-19" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-18">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-20" value="Fellépő" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-18">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-21" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="80" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-22" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-21">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-23" value="Tulajdonos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-21">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-24" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="710" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-25" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-24">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-26" value="Bár" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-24">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-36" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1440" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-37" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-36">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-38" value="Nyelvtudás" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-36">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-41" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1654" y="210" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-42" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-41">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-43" value="Résztvevő" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-41">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-45" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="470" y="200" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-46" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-45">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-47" value="Alkalmazott" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-45">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-48" value="adószám" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-49" value="alapítás" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-51" value="fizetés" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-54" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="470" y="320" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-55" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-54">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-56" value="műszak" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-54">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-57" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-59" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="800" y="315" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-60" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-59">
+          <mxGeometry width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-61" value="ital" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BsaPP271d8ZQrGvn2r-6-59">
+          <mxGeometry x="9" y="8.571428571428571" width="72" height="42.857142857142854" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-62" value="cég" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-63" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-64" value="ország" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1161" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-65" value="díj" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-66" value="nyelv" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-67" value="szint" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-68" value="név" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-70" value="diákigazolvány (O)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="470" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-71" value="nyelvtudás" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-72" value="lakcím" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1730" y="320" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-73" value="utca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-74" value="házszám" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-75" value="település" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1659" y="400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BsaPP271d8ZQrGvn2r-6-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="BsaPP271d8ZQrGvn2r-6-13" target="BsaPP271d8ZQrGvn2r-6-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
