@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE EZ3YRC_kurzusfelvetel SYSTEM "EZ3YRC_kurzusfelvetel.dtd">
+
+<EZ3YRC_kurzusfelvetel tanev="2023/2024/I" egyetem="ME">
+    <hallgato>
+        <hnev>Drig Dávid</hnev>
+        <szulev>2003</szulev>
+        <szak evf="5">programtervező informatikus BSc</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="GEMAK234-B">
+			<kurzusnev>Algoritmusok és Vizsgálatuk</kurzusnev>
+			<kredit>5</kredit>
+			<hely>320. elődaó</hely>
+			<idopont>Kedd 14:00-18:00</idopont>
+			<oktato>Dr. Házy Attila</oktato>	
+		</kurzus>
+        <kurzus id="GEIAL331-B">
+			<kurzusnev>Webtechnológiák I.</kurzusnev>
+			<kredit>5</kredit>
+			<hely>XXX. előadó</hely>
+			<idopont>Hétfő 14:00-18:00</idopont>
+			<oktato>Agárdi Anita</oktato>	
+		</kurzus>
+        <kurzus id="GEIAL130-B" jovahagyas="igen">
+			<kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+			<kredit>5</kredit>
+			<hely>XXXII. előadó</hely>
+			<idopont>Kedd 10:00-12:00</idopont>
+			<oktato>Kunné Dr. Tamás Judit</oktato>	
+            <oraado>Fazekas Levente</oraado>	
+		</kurzus>
+		<kurzus id="GEIAL322-B">
+			<kurzusnev>Adatkezelés XML-ben</kurzusnev>
+			<kredit>5</kredit>
+			<hely>XXXII. előadó</hely>
+			<idopont>Kedd 12:00-14:00</idopont>
+			<oktato>Dr. Bednarik László</oktato>		
+		</kurzus>
+        <kurzus id="GEIAL315-B" jovahagyas="nem">
+			<kurzusnev>Vállalati Információs Rendszerek Fejlesztése</kurzusnev>
+			<kredit>5</kredit>
+			<hely>Inf. 101</hely>
+			<idopont>Szerda 14:00-20:00</idopont>
+			<oktato>Dr. Sasvári Péter</oktato>	
+		</kurzus>
+    </kurzusok>
+
+</EZ3YRC_kurzusfelvetel>
