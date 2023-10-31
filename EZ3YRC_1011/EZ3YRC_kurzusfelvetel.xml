@@ -35,7 +35,7 @@
         <oktato>Dr. Bednarik László</oktato>		
     </kurzus>
 
-    <kurzus id="GEIAL120-B" jovahagyas="nem" nyelv="angol">
+    <kurzus id="GEIAL120-B" jovahagyas="nem" nyelv="magyar">
         <kurzusnev>Vállalati Információs rendszerek fejlesztése</kurzusnev>
         <kredit>5</kredit>
         <hely>Inf. 103</hely>
