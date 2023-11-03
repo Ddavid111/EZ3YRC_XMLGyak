@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Egyszeű típusok kigyűjtése, saját típusok meghatározása, megszorítás-->
+    <xs:element name="név" type="xs:string" />
+    <xs:element name="dátum" type="xs:date" />
+    <xs:element name="hozzávaló" type="xs:string" />
+    <xs:element name="elérhetőség" type="xs:string" />
+    <xs:element name="telefonszám" type="xs:telefonszamTipus" />
+    <xs:element name="pizzaneve" type="xs:pizzanevTipus"/>
+    <xs:element name="bank" type="xs:bankTipus"/>
+    <xs:element name="tipus" type="ttipus"/>
+    <xs:element name="lejáratidátum" type="xs:date"/>
+
+
+    <xs:simpleType name="telefonszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9]{1}[0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="pizzanevTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9áÁéÉíÍóÓöÖőŐúÚüÜűŰ, ]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="bankTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="OTP" />
+            <xs:enumeration value="KH" />
+            <xs:enumeration value="MBH" />
+            <xs:enumeration value="ERSTE" />
+            <xs:enumeration value="UNICREDIT" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ttipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="hitelkartya" />
+            <xs:enumeration value="bankkartya" />
+        </xs:restriction>
+    </xs:simpleType>
+
+ <!--Komplex típusokhoz saját típus meghatározása, sorrendiség, számosság etc. -->
+
+    <xs:complexType name="pizzázóTípus">
+        <xs:sequence>
+            <xs:element ref="név"/>
+            <xs:element ref="név"/>
+            <xs:element name="elérhetőség">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="weboldal" type="xs:string" />
+                        <xs:element name="telefonszám" type="telefonszamTipus"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="pizzázó_id" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="beszállításTípus">
+        <xs:sequence>
+            <xs:element ref="dátum"/>
+            <xs:element ref="hozzávaló"/>
+            <xs:attribute name="pizzázó" type="xs:integer" use="required" />
+            <xs:attribute name="beszállító" type="xs:integer" use="required" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>
