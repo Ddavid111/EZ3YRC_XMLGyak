@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Fesztivál_EZ3YRC xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+<Fesztival_EZ3YRC xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
  xs:noNamespaceSchemaLocation="XMLSchemaEZ3YRC.xsd">
-    <fesztivál feszkód="1">
-        <név>Sziget Fesztivál</név>
-        <helyszín>Budapest, Margit-sziget</helyszín>
-        <év>2022</év>
-    </fesztivál>
-    <fesztivál feszkód="2">
-        <név>Kocsonyafesztivál</név>
-        <helyszín>Miskolc</helyszín>
-        <év>2023</év>
-    </fesztivál>
+    <Fesztival FESZ_ID="1">
+        <nev>Sziget Fesztival</nev>
+        <helyszin>Budapest, Margit-sziget</helyszin>
+        <ev>2022</ev>
+    </Fesztival>
+    <fesztival FESZ_ID="2">
+        <nev>KocsonyaFesztival</nev>
+        <helyszin>Miskolc</helyszin>
+        <ev>2023</ev>
+    </fesztival>
 
-    <tulajdonos tkód="11" fesztivál="1">
-        <név>Sziget Kulturális Szervezőiroda</név>
-        <adószám>14657387-4-32</adószám>
-        <alapítás>1993</alapítás>
-        <bevétel>65134000</bevétel>
+    <tulajdonos T_ID="11" Fesztival="1">
+        <nev>Sziget Kulturális Szervezőiroda</nev>
+        <adoszam>14657387-4-32</adoszam>
+        <alapitas>1993</alapitas>
+        <bevetel>65134000</bevetel>
     </tulajdonos>
-    <tulajdonos tkód="12" fesztivál="2">
-        <név>Miskolc Város Önkormányzata</név>
-        <adószám>18765498-5-25</adószám>
-        <alapítás>2000</alapítás>
-        <bevétel>435600</bevétel>
+    <tulajdonos T_ID="12" Fesztival="2">
+        <nev>Miskolc Város Önkormányzata</nev>
+        <adoszam>18765498-5-25</adoszam>
+        <alapitas>2000</alapitas>
+        <bevetel>435600</bevetel>
     </tulajdonos>
 
-    <fellépő felkód="21" fesztivál="2">
-        <név>Alma együttes</név>
-        <ország>Magyarország</ország>
-        <díj>50000</díj>
-    </fellépő>
-    <fellépő felkód="22" fesztivál="1">
-        <név>Stromae</név>
-        <ország>Franciaország</ország>
-        <díj>760000</díj>
-    </fellépő>
+    <fellepo FEL_ID="21" Fesztival="2">
+        <nev>Alma együttes</nev>
+        <orszag>Magyarorszag</orszag>
+        <dij>50000</dij>
+    </fellepo>
+    <fellepo FEL_ID="22" Fesztival="1">
+        <nev>Stromae</nev>
+        <orszag>Franciaorszag</orszag>
+        <dij>760000</dij>
+    </fellepo>
 
-    <bár bkód="100" fesztivál="1">
-        <név>Tokaji Sátor</név>
+    <bar B_ID="100" Fesztival="1">
+        <nev>Tokaji Sátor</nev>
         <ital>tokaji aszú</ital>
         <ital>gyöngyözőbor</ital>
         <ital>borsodi sör</ital>
-        <cég>Tokaj Hegyalja kft.</cég>
-    </bár>
-    <bár bkód="101" fesztivál="2">
-        <név>Fröccsműhely</név>
+        <ceg>Tokaj Hegyalja kft.</ceg>
+    </bar>
+    <bar B_ID="101" Fesztival="2">
+        <nev>Fröccsműhely</nev>
         <ital>szódavíz</ital>
         <ital>kisfröccs</ital>
         <ital>házmester</ital>
         <ital>műhely fehérbor</ital>
-        <cég>Kovács és fia kft.</cég>
-    </bár>
+        <ceg>Kovács és fia kft.</ceg>
+    </bar>
 
-    <alkalmazott akód="1001" munkahely="100">
-        <név>Kiss Angéla</név>
+    <alkalmazott A_ID="1001" munkahely="100">
+        <nev>Kiss Angéla</nev>
         <muszak>8-14</muszak>
         <muszak>18-20</muszak>
-        <fizetés>30000</fizetés>
+        <fizetes>30000</fizetes>
     </alkalmazott>
-    <alkalmazott akód="1002" munkahely="100">
-        <név>Kovács Béla</név>
+    <alkalmazott A_ID="1002" munkahely="100">
+        <nev>Kovács Béla</nev>
         <muszak>14-16</muszak>
-        <fizetés>30000</fizetés>
+        <fizetes>30000</fizetes>
     </alkalmazott>
 
-    <résztvevő rkód="9001" fesztivál="2">
-        <név>Gerőcs Gergő</név>
-        <diákigazolvány>71615467894</diákigazolvány>
-        <lakcím>
-            <település>Miskolc</település>
+    <resztvevo R_ID="9001" Fesztival="2">
+        <nev>Gerőcs Gergő</nev>
+        <diakigazolvany>71615467894</diakigazolvany>
+        <lakcim>
+            <telepules>Miskolc</telepules>
             <utca>Széchenyi</utca>
-            <házszám>1</házszám>
-        </lakcím>
-    </résztvevő>
-    <résztvevő rkód="9002" fesztivál="2">
-        <név>Kamarás Erik</név>
-        <lakcím>
-            <település>Szeged</település>
+            <hazszam>1</hazszam>
+        </lakcim>
+    </resztvevo>
+    <resztvevo R_ID="9002" Fesztival="2">
+        <nev>Kamarás Erik</nev>
+        <lakcim>
+            <telepules>Szeged</telepules>
             <utca>Napfény</utca>
-            <házszám>23</házszám>
-        </lakcím>
-    </résztvevő>
+            <hazszam>23</hazszam>
+        </lakcim>
+    </resztvevo>
 
-    <nyelvtudás nykód="2001">
+    <nyelvtudas NY_ID="2001">
         <nyelv>angol</nyelv>
         <szint>B2</szint>
-    </nyelvtudás>
-    <nyelvtudás nykód="2002">
+    </nyelvtudas>
+    <nyelvtudas NY_ID="2002">
         <nyelv>német</nyelv>
         <szint>C1</szint>
-    </nyelvtudás>
+    </nyelvtudas>
 
-    <közvélemény kkód="1" megkérdezett="9002" nyelvtudás="2001">
-        <kérdező>Forgács Beatrix</kérdező>
-    </közvélemény>
-    <közvélemény kkód="2" megkérdezett="9002" nyelvtudás="2002">
-        <kérdező>Forgács Beatrix</kérdező>
-    </közvélemény>
-    <közvélemény kkód="3" megkérdezett="9001" nyelvtudás="2001">
-        <kérdező>Fülöp Tódor</kérdező>
-    </közvélemény>
+    <kozvelemeny K_ID="1" megkerdezett="9002" nyelvtudas="2001">
+        <kerdezo>Forgács Beatrix</kerdezo>
+    </kozvelemeny>
+    <kozvelemeny K_ID="2" megkerdezett="9002" nyelvtudas="2002">
+        <kerdezo>Forgács Beatrix</kerdezo>
+    </kozvelemeny>
+    <kozvelemeny K_ID="3" megkerdezett="9001" nyelvtudas="2001">
+        <kerdezo>Fülöp Tódor</kerdezo>
+    </kozvelemeny>
 
-</Fesztivál_EZ3YRC>
+</Fesztival_EZ3YRC>
