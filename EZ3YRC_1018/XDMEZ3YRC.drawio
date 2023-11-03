@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-03T09:43:06.204Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="Z6aoysM9LBCZ1ybtfvqC" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-03T10:05:18.099Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="_G4RbtWtTcRaNWarmXrS" version="22.0.8" type="github">
   <diagram name="1 oldal" id="7Gm-jjUQWlPTQZy7TqSw">
     <mxGraphModel dx="2261" dy="1959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -270,7 +270,7 @@
         <mxCell id="tR9ubNQARmh9IanpB0JH-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="E2DOWcGBg2nSnPcpl_ZB-49" target="tR9ubNQARmh9IanpB0JH-80">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E2DOWcGBg2nSnPcpl_ZB-49" value="diákigazolvány (O)" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="E2DOWcGBg2nSnPcpl_ZB-49" value="diákigazolvány" style="ellipse;whiteSpace=wrap;html=1;align=center;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="3460" y="300" width="110" height="40" as="geometry" />
         </mxCell>
         <mxCell id="E2DOWcGBg2nSnPcpl_ZB-50" value="&lt;u&gt;R_ID&lt;/u&gt;" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
