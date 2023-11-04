@@ -59,7 +59,7 @@
 
     <Bankkartya KARTYASZAM="9001" VEVO="1">
         <bank>OTP</bank>
-        <tipus>Bankkártya</tipus>
+        <tipus>Bankkartya</tipus>
         <lejaratidatum>2024.05</lejaratidatum>
     </Bankkartya>
 
