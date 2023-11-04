@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<Pizzazo_EZ3YRC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="XMLSchemaEZ3YRC.xsd">
 
-<Pizzazo_EZ3YRC xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
- xs:noNamespaceSchemaLocation="XMLSchemaEZ3YRC.xsd">
-
-    <Pizzazo PIZZAZO_ID="1">
+    <Pizzazo pizzazo_id="1">
         <nev>Don Pepe</nev>
         <elerhetoseg>
             <weboldal>https://www.donpepe.hu/hu</weboldal>
@@ -11,14 +10,14 @@
         </elerhetoseg>
     </Pizzazo>
 
-    <Beszallitas PIZZAZO="1" BESZALLITO="1">
-        <datum>2023.11.04</datum>
+    <Beszallitas beszallito="1" pizzazo="1">
+        <datum>2023-11-04</datum>
         <hozzavalo>hagyma</hozzavalo>
     </Beszallitas>
 
-    <Beszallito BESZALLITO_ID="1">
+    <Beszallito  beszallito_id="1">
         <nev>Kovács Lajos</nev>
-        <elerhetoseg>mintalajos@gmail.com</elerhetoseg>
+        <email>mintalajos@gmail.com</email>
         <cim>
             <varos>Miskolc</varos>
             <hazszam>5</hazszam>
@@ -27,12 +26,12 @@
         </cim>
     </Beszallito>
 
-    <Futar FUTAR_ID="1" PIZZAZO="1">
+    <Futar  futar_id="1" pizzazo="1">
         <nev>Dudás Lajos</nev>
-        <telefonszam>30956217</telefonszam>
+        <telefonszam>309562179</telefonszam>
     </Futar>
 
-    <Vevo VEVO_ID="1">
+    <Vevo vevo_id="1">
         <nev>Nehéz Gábor</nev>
         <telefonszam>306153384</telefonszam>
         <cim>
@@ -43,10 +42,9 @@
         </cim>
     </Vevo>
 
-    <Rendeles PIZZA="1" VEVO="1">
-    </Rendeles>
+    <Rendeles  pizza="1" vevo="1"></Rendeles>
 
-    <Pizza PIZZA_ID="1" PIZZAZO="1">
+    <Pizza  pizza_id="1" pizzazo="1">
         <pizzaneve>Sonkás Pizza</pizzaneve>
         <feltet>paradicsom</feltet>
         <feltet>mozzarella</feltet>
@@ -57,10 +55,10 @@
         <meret>30 cm</meret>
     </Pizza>
 
-    <Bankkartya KARTYASZAM="9001" VEVO="1">
+    <Bankkartya  kartyaszam="1" vevo="1">
         <bank>OTP</bank>
-        <tipus>Bankkartya</tipus>
-        <lejaratidatum>2024.05</lejaratidatum>
+        <tipus>bankkartya</tipus>
+        <lejaratidatum>2024-05</lejaratidatum>
     </Bankkartya>
 
 

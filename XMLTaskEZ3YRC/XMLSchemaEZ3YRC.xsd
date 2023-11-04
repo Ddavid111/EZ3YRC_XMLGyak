@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <!-- Egyszeű tipusok kigyűjtése, saját tipusok meghatározása, megszorítás-->
-    <xs:element name="nev" type="xs:string" />
-    <xs:element name="datum" type="xs:date" />
-    <xs:element name="hozzavalo" type="xs:string" />
-    <xs:element name="elerhetoseg" type="xs:string" />
-    <xs:element name="telefonszam" type="xs:telefonszamTipus" />
-    <xs:element name="pizzaneve" type="xs:pizzanevTipus"/>
-    <xs:element name="feltet" type="xs:feltetTipus"/>
+    <xs:element name="nev" type="xs:string"/>
+    <xs:element name="datum" type="xs:date"/>
+    <xs:element name="hozzavalo" type="xs:string"/>
+    <xs:element name="telefonszam" type="telefonszamTipus"/>
+    <xs:element name="email" type="xs:string"/>
+    <xs:element name="pizzaneve" type="pizzanevTipus"/>
+    <xs:element name="feltet" type="feltetTipus"/>
     <xs:element name="teljes_ar" type="xs:int"/>
     <xs:element name="meret" type="xs:string"/>
-    <xs:element name="bank" type="xs:bankTipus"/>
+    <xs:element name="bank" type="bankTipus"/>
     <xs:element name="tipus" type="ttipus"/>
-    <xs:element name="lejaratidatum" type="xs:date"/>
+    <xs:element name="lejaratidatum" type="xs:gYearMonth"/>
 
 
     <xs:simpleType name="telefonszamTipus">
@@ -35,22 +36,22 @@
 
     <xs:simpleType name="bankTipus">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="OTP" />
-            <xs:enumeration value="KH" />
-            <xs:enumeration value="MBH" />
-            <xs:enumeration value="ERSTE" />
-            <xs:enumeration value="UNICREDIT" />
+            <xs:enumeration value="OTP"/>
+            <xs:enumeration value="KH"/>
+            <xs:enumeration value="MBH"/>
+            <xs:enumeration value="ERSTE"/>
+            <xs:enumeration value="UNICREDIT"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="ttipus">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="hitelkartya" />
-            <xs:enumeration value="bankkartya" />
+            <xs:enumeration value="hitelkartya"/>
+            <xs:enumeration value="bankkartya"/>
         </xs:restriction>
     </xs:simpleType>
 
- <!--Komplex tipusokhoz saját tipus meghatározása, sorrendiség, számosság etc. -->
+    <!--Komplex tipusokhoz saját tipus meghatározása, sorrendiség, számosság etc. -->
 
     <xs:complexType name="pizzazoTipus">
         <xs:sequence>
@@ -58,40 +59,40 @@
             <xs:element name="elerhetoseg">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="weboldal" type="xs:string" />
+                        <xs:element name="weboldal" type="xs:string"/>
                         <xs:element name="telefonszam" type="telefonszamTipus"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="pizzazo_id" type="xs:integer" use="required" />
+        <xs:attribute name="pizzazo_id" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="beszallitasTipus">
         <xs:sequence>
             <xs:element ref="datum"/>
             <xs:element ref="hozzavalo"/>
-            <xs:attribute name="pizzazo" type="xs:integer" use="required" />
-            <xs:attribute name="beszallito" type="xs:integer" use="required" />
         </xs:sequence>
+        <xs:attribute name="pizzazo" type="xs:integer" use="required"/>
+        <xs:attribute name="beszallito" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="beszallitoTipus">
         <xs:sequence>
             <xs:element ref="nev"/>
-            <xs:element ref="elerhetoseg"/>
+            <xs:element ref="email"/>
             <xs:element name="cim">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="varos" type="xs:string" />
-                        <xs:element name="hazszam" type="int"/>
-                        <xs:element name="utca" type="string"/>
-                        <xs:element name="iranyitoszam" type="int"/>
+                        <xs:element name="varos" type="xs:string"/>
+                        <xs:element name="hazszam" type="xs:int"/>
+                        <xs:element name="utca" type="xs:string"/>
+                        <xs:element name="iranyitoszam" type="xs:int"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="beszallito_id" type="xs:integer" use="required" />
+        <xs:attribute name="beszallito_id" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="futarTipus">
@@ -99,8 +100,8 @@
             <xs:element ref="nev"/>
             <xs:element ref="telefonszam"/>
         </xs:sequence>
-        <xs:attribute name="futar_id" type="xs:integer" use="required" />
-        <xs:attribute name="pizzazo" type="xs:integer" use="required" />
+        <xs:attribute name="futar_id" type="xs:integer" use="required"/>
+        <xs:attribute name="pizzazo" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="vevoTipus">
@@ -110,22 +111,20 @@
             <xs:element name="cim">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="varos" type="xs:string" />
-                        <xs:element name="hazszam" type="int"/>
-                        <xs:element name="utca" type="string"/>
-                        <xs:element name="iranyitoszam" type="int"/>
+                        <xs:element name="varos" type="xs:string"/>
+                        <xs:element name="hazszam" type="xs:int"/>
+                        <xs:element name="utca" type="xs:string"/>
+                        <xs:element name="iranyitoszam" type="xs:int"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="vevo_id" type="xs:integer" use="required" />
+        <xs:attribute name="vevo_id" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="rendelesTipus">
-        <xs:sequence>
-            <xs:attribute name="pizza" type="xs:integer" use="required" />
-            <xs:attribute name="vevo" type="xs:integer" use="required" />
-        </xs:sequence>
+        <xs:attribute name="pizza" type="xs:integer" use="required"/>
+        <xs:attribute name="vevo" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="pizzaTipus">
@@ -135,114 +134,115 @@
             <xs:element name="teljes_ar" minOccurs="1" maxOccurs="unbounded"/>
             <xs:element ref="meret" minOccurs="1" maxOccurs="3"/>
         </xs:sequence>
-        <xs:attribute name="pizza_id" type="xs:integer" use="required" />
-        <xs:attribute name="pizzazo" type="xs:integer" use="required" />
+        <xs:attribute name="pizza_id" type="xs:integer" use="required"/>
+        <xs:attribute name="pizzazo" type="xs:integer" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="bankkartyaTipus">
         <xs:sequence>
             <xs:element ref="bank"/>
             <xs:element ref="tipus"/>
-            <xs:element name="lejaratidatum" />
+            <xs:element name="lejaratidatum"/>
         </xs:sequence>
-        <xs:attribute name="kartyaszam" type="xs:integer" use="required" />
-        <xs:attribute name="vevo" type="xs:integer" use="required" />
+        <xs:attribute name="kartyaszam" type="xs:integer" use="required"/>
+        <xs:attribute name="vevo" type="xs:integer" use="required"/>
     </xs:complexType>
 
 
 
 
-<!-- Gyökérelemtől az elemek felhasználása -->
+    <!-- Gyökérelemtől az elemek felhasználása -->
 
-<xs:element name="pizzazo_EZ3YRC">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Pizzazo" type="pizzazoTipus" minOccurs="0" maxOccurs="100"/>
-            <xs:element name="Beszallitas" type="beszallitasTipus" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Beszallito" type="beszallitoTipus" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Futar" type="futarTipus" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Vevo" type="vevoTipus" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Rendeles" type="rendelesTipus" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Pizza" type="pizzaTipus" minOccurs="0" maxOccurs="100"/>
-            <xs:element name="Bankkartya" type="bankkartyaTipus" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:element name="Pizzazo_EZ3YRC">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Pizzazo" type="pizzazoTipus" minOccurs="0" maxOccurs="100"/>
+                <xs:element name="Beszallitas" type="beszallitasTipus" minOccurs="0"
+                    maxOccurs="unbounded"/>
+                <xs:element name="Beszallito" type="beszallitoTipus" minOccurs="0"
+                    maxOccurs="unbounded"/>
+                <xs:element name="Futar" type="futarTipus" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Vevo" type="vevoTipus" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Rendeles" type="rendelesTipus" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Pizza" type="pizzaTipus" minOccurs="0" maxOccurs="100"/>
+                <xs:element name="Bankkartya" type="bankkartyaTipus" minOccurs="0"
+                    maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
 
-<!-- Elsődleges kulcsok -->
+        <!-- Elsődleges kulcsok -->
 
-<xs:key name="pizzazo_kulcs">
-    <xs:selector xpath="Pizzazo"/>
-    <xs:field xpath="@PIZZAZO_ID"/>
-</xs:key>
+        <xs:key name="pizzazo_kulcs">
+            <xs:selector xpath="Pizzazo"/>
+            <xs:field xpath="@pizzazo_id"/>
+        </xs:key>
 
-<xs:key name="beszallito_kulcs">
-    <xs:selector xpath="Beszallito"/>
-    <xs:field xpath="@BESZALLITO_ID"/>
-</xs:key>
+        <xs:key name="beszallito_kulcs">
+            <xs:selector xpath="Beszallito"/>
+            <xs:field xpath="@beszallito_id"/>
+        </xs:key>
 
-<xs:key name="futar_kulcs">
-    <xs:selector xpath="Futar"/>
-    <xs:field xpath="@FUTAR_ID"/>
-</xs:key>
+        <xs:key name="futar_kulcs">
+            <xs:selector xpath="Futar"/>
+            <xs:field xpath="@futar_id"/>
+        </xs:key>
 
-<xs:key name="vevo_kulcs">
-    <xs:selector xpath="Vevo"/>
-    <xs:field xpath="@VEVO_ID"/>
-</xs:key>
+        <xs:key name="vevo_kulcs">
+            <xs:selector xpath="Vevo"/>
+            <xs:field xpath="@vevo_id"/>
+        </xs:key>
 
-<xs:key name="pizza_kulcs">
-    <xs:selector xpath="Pizza"/>
-    <xs:field xpath="@PIZZA_ID"/>
-</xs:key>
+        <xs:key name="pizza_kulcs">
+            <xs:selector xpath="Pizza"/>
+            <xs:field xpath="@pizza_id"/>
+        </xs:key>
 
-<xs:key name="bankkartya_kulcs">
-    <xs:selector xpath="Bankkartya"/>
-    <xs:field xpath="@KARTYASZAM"/>
-</xs:key>
+        <xs:key name="bankkartya_kulcs">
+            <xs:selector xpath="Bankkartya"/>
+            <xs:field xpath="@kartyaszam"/>
+        </xs:key>
 
-<!-- Idegen kulcsok -->
+        <!-- Idegen kulcsok -->
 
-<xs:keyref name="pizzazo_beszallitas_kulcs" refer="pizzazo_kulcs">
-    <xs:selector xpath="Beszallitas"/>
-    <xs:field xpath="@PIZZAZO"/>
-</xs:keyref>
+        <xs:keyref name="pizzazo_beszallitas_kulcs" refer="pizzazo_kulcs">
+            <xs:selector xpath="Beszallitas"/>
+            <xs:field xpath="@pizzazo"/>
+        </xs:keyref>
 
-<xs:keyref name="beszallito_beszallitas_kulcs" refer="beszallito_kulcs">
-    <xs:selector xpath="Beszallitas"/>
-    <xs:field xpath="@BESZALLITO"/>
-</xs:keyref>
+        <xs:keyref name="beszallito_beszallitas_kulcs" refer="beszallito_kulcs">
+            <xs:selector xpath="Beszallitas"/>
+            <xs:field xpath="@beszallito"/>
+        </xs:keyref>
 
-<xs:keyref name="pizzazo_futar_kulcs" refer="pizzazo_kulcs">
-    <xs:selector xpath="Futar"/>
-    <xs:field xpath="@PIZZAZO"/>
-</xs:keyref>
+        <xs:keyref name="pizzazo_futar_kulcs" refer="pizzazo_kulcs">
+            <xs:selector xpath="Futar"/>
+            <xs:field xpath="@pizzazo"/>
+        </xs:keyref>
 
-<xs:keyref name="pizza_rendeles_kulcs" refer="pizza_kulcs">
-    <xs:selector xpath="Rendeles"/>
-    <xs:field xpath="@PIZZA"/>
-</xs:keyref>
+        <xs:keyref name="pizza_rendeles_kulcs" refer="pizza_kulcs">
+            <xs:selector xpath="Rendeles"/>
+            <xs:field xpath="@pizza"/>
+        </xs:keyref>
 
-<xs:keyref name="vevo_rendeles_kulcs" refer="vevo_kulcs">
-    <xs:selector xpath="Rendeles"/>
-    <xs:field xpath="@VEVO"/>
-</xs:keyref>
+        <xs:keyref name="vevo_rendeles_kulcs" refer="vevo_kulcs">
+            <xs:selector xpath="Rendeles"/>
+            <xs:field xpath="@vevo"/>
+        </xs:keyref>
 
-<xs:keyref name="pizzazo_pizza_kulcs" refer="pizzazo_kulcs">
-    <xs:selector xpath="Pizza"/>
-    <xs:field xpath="@PIZZAZO"/>
-</xs:keyref>
+        <xs:keyref name="pizzazo_pizza_kulcs" refer="pizzazo_kulcs">
+            <xs:selector xpath="Pizza"/>
+            <xs:field xpath="@pizzazo"/>
+        </xs:keyref>
 
-<xs:keyref name="vevo_bankkartya_kulcs" refer="vevo_kulcs">
-    <xs:selector xpath="Bankkartya"/>
-    <xs:field xpath="@VEVO"/>
-</xs:keyref>
+        <xs:keyref name="vevo_bankkartya_kulcs" refer="vevo_kulcs">
+            <xs:selector xpath="Bankkartya"/>
+            <xs:field xpath="@vevo"/>
+        </xs:keyref>
 
-<!-- Az 1:1 kapcsolat megvalósítás -->
-<xs:unique name="pizzazo_futar_egyegy">
-    <xs:selector xpath="futar"/>
-    <xs:field xpath="@PIZZAZO"/>
-</xs:unique>
-
-
-</xs:element>
+        <!-- Az 1:1 kapcsolat megvalósítás -->
+        <xs:unique name="pizzazo_futar_egyegy">
+            <xs:selector xpath="futar"/>
+            <xs:field xpath="@pizzazo"/>
+        </xs:unique>
+    </xs:element>
 </xs:schema>
