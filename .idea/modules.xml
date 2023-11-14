@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EZ3YRC_1025/EZ3YRC_1025.iml" filepath="$PROJECT_DIR$/EZ3YRC_1025/EZ3YRC_1025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EZ3YRC_1108/EZ3YRC_1108.iml" filepath="$PROJECT_DIR$/EZ3YRC_1108/EZ3YRC_1108.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EZ3YRC_XMLGyak.iml" filepath="$PROJECT_DIR$/.idea/EZ3YRC_XMLGyak.iml" />
+    </modules>
+  </component>
+</project>
