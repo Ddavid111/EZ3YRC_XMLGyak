@@ -240,9 +240,9 @@
         </xs:keyref>
 
         <!-- Az 1:1 kapcsolat megvalósítás -->
-        <xs:unique name="pizzazo_futar_egyegy">
-            <xs:selector xpath="futar"/>
-            <xs:field xpath="@pizzazo"/>
+        <xs:unique name="vevo_bankkartya_egyegy">
+            <xs:selector xpath="Bankkartya"/>
+            <xs:field xpath="@vevo"/>
         </xs:unique>
     </xs:element>
 </xs:schema>
