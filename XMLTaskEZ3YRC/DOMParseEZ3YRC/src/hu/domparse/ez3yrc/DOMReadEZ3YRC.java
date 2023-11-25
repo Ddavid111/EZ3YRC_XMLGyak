@@ -11,7 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class DOMReadEz3yrc {
+public class DOMReadEZ3YRC {
 
     public static void main(String[] args) {
         try {

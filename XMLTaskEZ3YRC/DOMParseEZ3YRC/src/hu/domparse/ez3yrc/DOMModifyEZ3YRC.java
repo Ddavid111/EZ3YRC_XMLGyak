@@ -11,7 +11,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.IOException;
 
-public class DOMModifyEz3yrc {
+public class DOMModifyEZ3YRC {
 
     public static void main(String[] args) {
         try {
