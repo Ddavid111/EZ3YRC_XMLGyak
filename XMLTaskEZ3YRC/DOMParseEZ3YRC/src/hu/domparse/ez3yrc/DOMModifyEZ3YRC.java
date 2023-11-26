@@ -1,139 +1,114 @@
 package hu.domparse.ez3yrc;
 
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.*;
+import javax.xml.parsers.*;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.IOException;
+import org.w3c.dom.*;
+import java.io.File;
 
 public class DOMModifyEZ3YRC {
-
-    public static void main(String[] args) {
+    // Main metódus
+    public static void main(String argv[]) {
         try {
-            // Betöltjük az XML dokumentumot
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document document = db.parse("XMLEZ3YRC.xml");
+            File inputFile = new File("XMLEZ3YRC.xml");
 
-            // Példa: Módosítás a Pizzazo nevében
-            modifyPizzazoName(document, "1", "Don Pepe Pizzázó");
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            Document doc = docBuilder.parse(inputFile);
 
-            // Példa: Módosítás a Pizza méretében
-            modifyPizzaSize(document, "1", "17 cm", "20 cm");
+            modifyPizzazos(doc);
+            modifyPizzas(doc);
+            modifyBeszallitasIngredients(doc);
+            modifyVevoPhoneNumbers(doc);
+            modifyBankkartyaData(doc);
 
-            // Példa: Módosítás a Beszallitas hozzávalójában
-            modifyBeszallitasHozzavalo(document, "1", "hagyma", "paprika");
-
-            // Példa: Módosítás a Vevo telefonszámában
-            modifyVevoTelefonszam(document, "1", "306000000");
-
-            // Példa: Módosítás a Bankkártya adataiban
-            modifyPaymentMethod(document, "1", "1", "MBH", "hitelkartya");
-
-            // Kiírjuk a módosított dokumentumot a konzolra
-            printXmlDocument(document);
-
-        } catch (ParserConfigurationException | SAXException | IOException | TransformerException e) {
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            DOMSource source = new DOMSource(doc);
+            StreamResult consoleResult = new StreamResult(System.out);
+            transformer.transform(source, consoleResult);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    // Példa: Módosítás a Pizzazo nevében
-    private static void modifyPizzazoName(Document document, String pizzazoId, String newName) {
-        NodeList pizzazoList = document.getElementsByTagName("Pizzazo");
+    // 1-es id-val rendelkező Pizzazo nevének módosítása Fortuna Pizzériára
+    private static void modifyPizzazos(Document doc) {
+        NodeList pizzazoList = doc.getElementsByTagName("Pizzazo");
         for (int i = 0; i < pizzazoList.getLength(); i++) {
-            Element pizzazo = (Element) pizzazoList.item(i);
-            if (pizzazo.getAttribute("pizzazo_id").equals(pizzazoId)) {
-                Element nevElement = (Element) pizzazo.getElementsByTagName("nev").item(0);
-                nevElement.setTextContent(newName);
-                System.out.println("Pizzazo név módosítva: " + newName);
-                break;
+            Node pizzazo = pizzazoList.item(i);
+            Element pizzazoElement = (Element) pizzazo;
+            // Az első Pizzazo elem esetén
+            if ("1".equals(pizzazoElement.getAttribute("pizzazo_id"))) {
+                pizzazoElement.getElementsByTagName("nev").item(0).setTextContent("Fortuna Pizzéria");
             }
         }
     }
 
-    // Példa: Módosítás a Pizza méretében
-    private static void modifyPizzaSize(Document document, String pizzaId, String oldSize, String newSize) {
-        NodeList pizzaList = document.getElementsByTagName("Pizza");
+    // Pizza méretének módosítása minden pizzánál 25,32,50 cm-re
+    private static void modifyPizzas(Document doc) {
+        NodeList pizzaList = doc.getElementsByTagName("Pizza");
         for (int i = 0; i < pizzaList.getLength(); i++) {
-            Element pizza = (Element) pizzaList.item(i);
-            if (pizza.getAttribute("pizza_id").equals(pizzaId)) {
-                NodeList meretList = pizza.getElementsByTagName("meret");
-                for (int j = 0; j < meretList.getLength(); j++) {
-                    Element meretElement = (Element) meretList.item(j);
-                    if (meretElement.getTextContent().equals(oldSize)) {
-                        meretElement.setTextContent(newSize);
-                        System.out.println("Pizza méret módosítva: " + newSize);
-                        break;
-                    }
+            Node pizza = pizzaList.item(i);
+            Element pizzaElement = (Element) pizza;
+            NodeList meretList = pizzaElement.getElementsByTagName("meret");
+            // Az összes méretet átállítjuk 25, 32, 50-re
+            for (int j = 0; j < meretList.getLength(); j++) {
+                Node meretNode = meretList.item(j);
+                meretNode.setTextContent("25");
+                if (j == 1) {
+                    meretNode.setTextContent("32");
+                } else if (j == 2) {
+                    meretNode.setTextContent("50");
                 }
-                break;
             }
         }
     }
 
-    // Példa: Módosítás a Beszallitas hozzávalójában
-    private static void modifyBeszallitasHozzavalo(Document document, String beszallitasId, String oldHozzavalo, String newHozzavalo) {
-        NodeList beszallitasList = document.getElementsByTagName("Beszallitas");
+    // Beszallitas hozzávalójának módosítása a 2-es id-val rendelkezőnél olajra
+    private static void modifyBeszallitasIngredients(Document doc) {
+        NodeList beszallitasList = doc.getElementsByTagName("Beszallitas");
         for (int i = 0; i < beszallitasList.getLength(); i++) {
-            Element beszallitas = (Element) beszallitasList.item(i);
-            if (beszallitas.getAttribute("beszallito").equals(beszallitasId)) {
-                Element hozzavaloElement = (Element) beszallitas.getElementsByTagName("hozzavalo").item(0);
-                if (hozzavaloElement.getTextContent().equals(oldHozzavalo)) {
-                    hozzavaloElement.setTextContent(newHozzavalo);
-                    System.out.println("Beszállítás hozzávaló módosítva: " + newHozzavalo);
-                    break;
-                }
+            Node beszallitas = beszallitasList.item(i);
+            Element beszallitasElement = (Element) beszallitas;
+
+            if ("2".equals(beszallitasElement.getAttribute("beszallito")) &&
+                    "2".equals(beszallitasElement.getAttribute("pizzazo"))) {
+                beszallitasElement.getElementsByTagName("hozzavalo").item(0).setTextContent("olaj");
             }
         }
     }
 
-    // Példa: Módosítás a Vevo telefonszámában
-    private static void modifyVevoTelefonszam(Document document, String vevoId, String newTelefonszam) {
-        NodeList vevoList = document.getElementsByTagName("Vevo");
+    // A 3-as id-val rendelkező Vevő telefonszámának módosítása  408883091-re
+    private static void modifyVevoPhoneNumbers(Document doc) {
+        NodeList vevoList = doc.getElementsByTagName("Vevo");
         for (int i = 0; i < vevoList.getLength(); i++) {
-            Element vevo = (Element) vevoList.item(i);
-            if (vevo.getAttribute("vevo_id").equals(vevoId)) {
-                Element telefonszamElement = (Element) vevo.getElementsByTagName("telefonszam").item(0);
-                telefonszamElement.setTextContent(newTelefonszam);
-                System.out.println("Vevő telefonszáma módosítva: " + newTelefonszam);
-                break;
+            Node vevo = vevoList.item(i);
+            Element vevoElement = (Element) vevo;
+
+            if ("3".equals(vevoElement.getAttribute("vevo_id"))) {
+                vevoElement.getElementsByTagName("telefonszam").item(0).setTextContent("408883091");
             }
         }
     }
 
-    // Példa: Módosítás a Bankkártya adataiban
-    private static void modifyPaymentMethod(Document document, String vevoId, String kartyaszam, String newBank, String newTipus) {
-        NodeList bankkartyaList = document.getElementsByTagName("Bankkartya");
+    // Bankkártya adatainak módosítása a 3-as id-val rendelkezőnél a bank neve: OTP a kártya típusa: hitelkártya a lejárati dátum: 2028-12
+    private static void modifyBankkartyaData(Document doc) {
+        NodeList bankkartyaList = doc.getElementsByTagName("Bankkartya");
         for (int i = 0; i < bankkartyaList.getLength(); i++) {
-            Element bankkartya = (Element) bankkartyaList.item(i);
-            if (bankkartya.getAttribute("vevo").equals(vevoId) && bankkartya.getAttribute("kartyaszam").equals(kartyaszam)) {
-                Element bankElement = (Element) bankkartya.getElementsByTagName("bank").item(0);
-                Element tipusElement = (Element) bankkartya.getElementsByTagName("tipus").item(0);
+            Node bankkartya = bankkartyaList.item(i);
+            Element bankkartyaElement = (Element) bankkartya;
 
-                bankElement.setTextContent(newBank);
-                tipusElement.setTextContent(newTipus);
-
-                System.out.println("Bankkártya adatai módosítva: Bank: " + newBank + ", Típus: " + newTipus);
-                break;
+            if ("3".equals(bankkartyaElement.getAttribute("kartyaszam")) &&
+                    "3".equals(bankkartyaElement.getAttribute("vevo"))) {
+                bankkartyaElement.getElementsByTagName("bank").item(0).setTextContent("OTP");
+                bankkartyaElement.getElementsByTagName("tipus").item(0).setTextContent("hitelkartya");
+                bankkartyaElement.getElementsByTagName("lejaratidatum").item(0).setTextContent("2028-12");
             }
         }
-    }
-
-    // Kiírja az XML dokumentumot a konzolra
-    private static void printXmlDocument(Document document) throws TransformerException {
-        TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer transformer = tf.newTransformer();
-        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-        // Kiírjuk a DOM struktúrát a konzolra
-        StreamResult result = new StreamResult(System.out);
-        DOMSource source = new DOMSource(document);
-        transformer.transform(source, result);
     }
 }

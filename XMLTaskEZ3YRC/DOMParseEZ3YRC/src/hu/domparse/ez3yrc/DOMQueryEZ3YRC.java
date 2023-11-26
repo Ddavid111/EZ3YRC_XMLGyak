@@ -22,7 +22,7 @@ public class DOMQueryEZ3YRC {
             // Példa: 2024 utáni lejárattal rendelkező bankkártyák kiírása
             query2024UtanLejaroBankkartyak(document);
 
-            // Példa: 2600-nál olcsóbb pizzák kiírása
+            // Példa: 2024 utáni lejárattal rendelkező bankkártyák kiírása
             query3000NelOlcsobbPizzak(document);
 
             // Példa: Kilistázza a miskolci pizzériákat
