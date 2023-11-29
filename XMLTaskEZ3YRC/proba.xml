@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Pizzazo_EZ3YRC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaEZ3YRC.xsd">
+        
+    <!--Pizzázók-->
+     
+
+    
+    <Pizzazo pizzazo_id="1">
+                
+        <nev>Fortuna Pizzéria</nev>
+                
+        <elerhetoseg>
+                        
+            <weboldal>https://www.donpepe.hu/hu</weboldal>
+                        
+            <telefonszam>309082091</telefonszam>
+                    
+        </elerhetoseg>
+            
+    </Pizzazo>
+        
+    <Pizzazo pizzazo_id="2">
+                
+        <nev>Pizza Tábor</nev>
+                
+        <elerhetoseg>
+                        
+            <weboldal>https://www.pizzatabor.hu/</weboldal>
+                        
+            <telefonszam>204716655</telefonszam>
+                    
+        </elerhetoseg>
+            
+    </Pizzazo>
+        
+    <Pizzazo pizzazo_id="3">
+                
+        <nev>Fortuna Pizzéria</nev>
+                
+        <elerhetoseg>
+                        
+            <weboldal>https://pizzafortuna.hu/</weboldal>
+                        
+            <telefonszam>302415505</telefonszam>
+                    
+        </elerhetoseg>
+            
+    </Pizzazo>
+        
+    <!--Beszállítás-->
+     
+
+    
+    <Beszallitas beszallito="1" pizzazo="1">
+                
+        <datum>2023-11-04</datum>
+                
+        <hozzavalo>hagyma</hozzavalo>
+            
+    </Beszallitas>
+        
+    <Beszallitas beszallito="2" pizzazo="2">
+                
+        <datum>2023-11-19</datum>
+                
+        <hozzavalo>olaj</hozzavalo>
+            
+    </Beszallitas>
+        
+    <Beszallitas beszallito="3" pizzazo="3">
+                
+        <datum>2023-11-25</datum>
+                
+        <hozzavalo>olaj</hozzavalo>
+            
+    </Beszallitas>
+        
+    <!--Beszállítók-->
+     
+
+
+    
+    <Beszallito beszallito_id="1">
+                
+        <nev>Kovács Lajos</nev>
+                
+        <email>mintalajos@gmail.com</email>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>5</hazszam>
+                        
+            <utca>Klapka György</utca>
+                        
+            <iranyitoszam>3524</iranyitoszam>
+                    
+        </cim>
+            
+    </Beszallito>
+        
+    <Beszallito beszallito_id="2">
+                
+        <nev>Nehéz István</nev>
+                
+        <email>mintaistvan@gmail.com</email>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>5</hazszam>
+                        
+            <utca>Petőfi Sándor</utca>
+                        
+            <iranyitoszam>3527</iranyitoszam>
+                    
+        </cim>
+            
+    </Beszallito>
+        
+    <Beszallito beszallito_id="3">
+                
+        <nev>Kiss István</nev>
+                
+        <email>mintakiss@gmail.com</email>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>4</hazszam>
+                        
+            <utca>József Attila</utca>
+                        
+            <iranyitoszam>3531</iranyitoszam>
+                    
+        </cim>
+            
+    </Beszallito>
+        
+    <!--Futárok-->
+     
+
+
+    
+    <Futar futar_id="1" pizzazo="1">
+                
+        <nev>Dudás Lajos</nev>
+                
+        <telefonszam>309562179</telefonszam>
+            
+    </Futar>
+        
+    <Futar futar_id="2" pizzazo="2">
+                
+        <nev>Lajos Imre</nev>
+                
+        <telefonszam>309652179</telefonszam>
+            
+    </Futar>
+        
+    <Futar futar_id="3" pizzazo="3">
+                
+        <nev>Nagy Márkó</nev>
+                
+        <telefonszam>209852179</telefonszam>
+            
+    </Futar>
+        
+    <!--Vevők-->
+     
+
+
+    
+    <Vevo vevo_id="1">
+                
+        <nev>Nehéz Gábor</nev>
+                
+        <telefonszam>306153384</telefonszam>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>6</hazszam>
+                        
+            <utca>Hajós Alfréd</utca>
+                        
+            <iranyitoszam>3524</iranyitoszam>
+                    
+        </cim>
+            
+    </Vevo>
+        
+    <Vevo vevo_id="2">
+                
+        <nev>Kiss Lajos</nev>
+                
+        <telefonszam>206453384</telefonszam>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>4</hazszam>
+                        
+            <utca>Vörösmarty Mihály</utca>
+                        
+            <iranyitoszam>3532</iranyitoszam>
+                    
+        </cim>
+            
+    </Vevo>
+        
+    <Vevo vevo_id="3">
+                
+        <nev>Elek János</nev>
+                
+        <telefonszam>408883091</telefonszam>
+                
+        <cim>
+                        
+            <varos>Miskolc</varos>
+                        
+            <hazszam>6</hazszam>
+                        
+            <utca>Árok utca</utca>
+                        
+            <iranyitoszam>3531</iranyitoszam>
+                    
+        </cim>
+            
+    </Vevo>
+        
+    <!--Rendelés-->
+     
+
+    
+    <Rendeles pizza="1" vevo="1"/>
+        
+    <Rendeles pizza="2" vevo="2"/>
+        
+    <Rendeles pizza="3" vevo="3"/>
+        
+    <!--Pizza-->
+     
+
+    
+    <Pizza pizza_id="1" pizzazo="1">
+                
+        <pizzaneve>Sonkás Pizza</pizzaneve>
+                
+        <feltet>paradicsom</feltet>
+                
+        <feltet>mozzarella</feltet>
+                
+        <feltet>sonka</feltet>
+                
+        <teljes_ar>2000</teljes_ar>
+                
+        <meret>25</meret>
+                
+        <meret>32</meret>
+                
+        <meret>50</meret>
+            
+    </Pizza>
+        
+    <Pizza pizza_id="2" pizzazo="2">
+                
+        <pizzaneve>Pizza Mexikói</pizzaneve>
+                
+        <feltet>paradicsom</feltet>
+                
+        <feltet>chili</feltet>
+                
+        <feltet>sajt</feltet>
+                
+        <teljes_ar>2550</teljes_ar>
+                
+        <meret>25</meret>
+                
+        <meret>32</meret>
+                
+        <meret>50</meret>
+            
+    </Pizza>
+        
+    <Pizza pizza_id="3" pizzazo="3">
+                
+        <pizzaneve>Aladdin Pizza</pizzaneve>
+                
+        <feltet>aszalt paradicsom</feltet>
+                
+        <feltet>ananász</feltet>
+                
+        <feltet>csirkemell</feltet>
+                
+        <teljes_ar>2750</teljes_ar>
+                
+        <meret>25</meret>
+                
+        <meret>32</meret>
+                
+        <meret>50</meret>
+            
+    </Pizza>
+        
+    <!--Bankkártyák-->
+     
+
+    
+    <Bankkartya kartyaszam="1" vevo="1">
+                
+        <bank>OTP</bank>
+                
+        <tipus>bankkartya</tipus>
+                
+        <lejaratidatum>2024-05</lejaratidatum>
+            
+    </Bankkartya>
+        
+    <Bankkartya kartyaszam="2" vevo="2">
+                
+        <bank>ERSTE</bank>
+                
+        <tipus>hitelkartya</tipus>
+                
+        <lejaratidatum>2025-06</lejaratidatum>
+            
+    </Bankkartya>
+        
+    <Bankkartya kartyaszam="3" vevo="3">
+                
+        <bank>OTP</bank>
+                
+        <tipus>hitelkartya</tipus>
+                
+        <lejaratidatum>2028-12</lejaratidatum>
+            
+    </Bankkartya>
+    
+</Pizzazo_EZ3YRC>
