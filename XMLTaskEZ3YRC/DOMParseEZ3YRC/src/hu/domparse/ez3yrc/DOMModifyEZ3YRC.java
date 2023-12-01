@@ -20,66 +20,33 @@ public class DOMModifyEZ3YRC {
             Document doc = docBuilder.parse(inputFile);
 
             // Módosítások a main függvényben
-            NodeList pizzazoList = doc.getElementsByTagName("Pizzazo");
-            for (int i = 0; i < pizzazoList.getLength(); i++) {
-                Node pizzazo = pizzazoList.item(i);
-                Element pizzazoElement = (Element) pizzazo;
-                // Az első Pizzazo elem esetén
-                if ("1".equals(pizzazoElement.getAttribute("pizzazo_id"))) {
-                    pizzazoElement.getElementsByTagName("nev").item(0).setTextContent("Fortuna Pizzéria");
-                }
-            }
+            // Módosítás 1: Pizzazo nevének módosítása
+            Element firstPizzazo = (Element) doc.getElementsByTagName("Pizzazo").item(0);
+            firstPizzazo.getElementsByTagName("nev").item(0).setTextContent("Fortuna Pizzéria");
 
+            // Módosítás 2: Pizza méreteinek átállítása
             NodeList pizzaList = doc.getElementsByTagName("Pizza");
             for (int i = 0; i < pizzaList.getLength(); i++) {
-                Node pizza = pizzaList.item(i);
-                Element pizzaElement = (Element) pizza;
+                Element pizzaElement = (Element) pizzaList.item(i);
                 NodeList meretList = pizzaElement.getElementsByTagName("meret");
-                // Az összes méretet átállítjuk 25, 32, 50-re
-                for (int j = 0; j < meretList.getLength(); j++) {
-                    Node meretNode = meretList.item(j);
-                    meretNode.setTextContent("25");
-                    if (j == 1) {
-                        meretNode.setTextContent("32");
-                    } else if (j == 2) {
-                        meretNode.setTextContent("50");
-                    }
-                }
+                meretList.item(0).setTextContent("25");
+                meretList.item(1).setTextContent("32");
+                meretList.item(2).setTextContent("50");
             }
 
-            NodeList beszallitasList = doc.getElementsByTagName("Beszallitas");
-            for (int i = 0; i < beszallitasList.getLength(); i++) {
-                Node beszallitas = beszallitasList.item(i);
-                Element beszallitasElement = (Element) beszallitas;
+            // Módosítás 3: Beszállítás hozzávaló módosítása
+            Element beszallitasElement = (Element) doc.getElementsByTagName("Beszallitas").item(1);
+            beszallitasElement.getElementsByTagName("hozzavalo").item(0).setTextContent("olaj");
 
-                if ("2".equals(beszallitasElement.getAttribute("beszallito")) &&
-                        "2".equals(beszallitasElement.getAttribute("pizzazo"))) {
-                    beszallitasElement.getElementsByTagName("hozzavalo").item(0).setTextContent("olaj");
-                }
-            }
+            // Módosítás 4: Vevő telefonszámának módosítása
+            Element thirdVevo = (Element) doc.getElementsByTagName("Vevo").item(2);
+            thirdVevo.getElementsByTagName("telefonszam").item(0).setTextContent("408883091");
 
-            NodeList vevoList = doc.getElementsByTagName("Vevo");
-            for (int i = 0; i < vevoList.getLength(); i++) {
-                Node vevo = vevoList.item(i);
-                Element vevoElement = (Element) vevo;
-
-                if ("3".equals(vevoElement.getAttribute("vevo_id"))) {
-                    vevoElement.getElementsByTagName("telefonszam").item(0).setTextContent("408883091");
-                }
-            }
-
-            NodeList bankkartyaList = doc.getElementsByTagName("Bankkartya");
-            for (int i = 0; i < bankkartyaList.getLength(); i++) {
-                Node bankkartya = bankkartyaList.item(i);
-                Element bankkartyaElement = (Element) bankkartya;
-
-                if ("3".equals(bankkartyaElement.getAttribute("kartyaszam")) &&
-                        "3".equals(bankkartyaElement.getAttribute("vevo"))) {
-                    bankkartyaElement.getElementsByTagName("bank").item(0).setTextContent("OTP");
-                    bankkartyaElement.getElementsByTagName("tipus").item(0).setTextContent("hitelkartya");
-                    bankkartyaElement.getElementsByTagName("lejaratidatum").item(0).setTextContent("2028-12");
-                }
-            }
+            // Módosítás 5: Bankkártya adatainak módosítása
+            Element thirdBankkartya = (Element) doc.getElementsByTagName("Bankkartya").item(2);
+            thirdBankkartya.getElementsByTagName("bank").item(0).setTextContent("OTP");
+            thirdBankkartya.getElementsByTagName("tipus").item(0).setTextContent("hitelkartya");
+            thirdBankkartya.getElementsByTagName("lejaratidatum").item(0).setTextContent("2028-12");
 
             // Kimenet kiírása
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
