@@ -15,6 +15,7 @@ public class DOMReadEZ3YRC {
 
     public static void main(String[] args) {
         try {
+            // XML fájl beolvasása és DOM objektum létrehozása
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(new File("XMLEZ3YRC.xml"));
@@ -23,6 +24,7 @@ public class DOMReadEZ3YRC {
             System.out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
             System.out.println("<Pizzazo_EZ3YRC xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"XMLSchemaEZ3YRC.xsd\">\n");
 
+            // Különböző részek feldolgozása külön metódusokon keresztül
             readPizzazos(document);
             printEmptyLine();
 
@@ -53,6 +55,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Pizzázók adatainak beolvasása és kiírása
     private static void readPizzazos(Document document) {
         NodeList pizzazoList = document.getElementsByTagName("Pizzazo");
         for (int temp = 0; temp < pizzazoList.getLength(); temp++) {
@@ -77,6 +80,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Beszállítások adatainak beolvasása és kiírása
     private static void readBeszallitasok(Document document) {
         NodeList beszallitasList = document.getElementsByTagName("Beszallitas");
         for (int temp = 0; temp < beszallitasList.getLength(); temp++) {
@@ -96,6 +100,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Beszállítók adatainak beolvasása és kiírása
     private static void readBeszallitok(Document document) {
         NodeList beszallitoList = document.getElementsByTagName("Beszallito");
         for (int temp = 0; temp < beszallitoList.getLength(); temp++) {
@@ -124,6 +129,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Futárok adatainak beolvasása és kiírása
     private static void readFutarok(Document document) {
         NodeList futarList = document.getElementsByTagName("Futar");
         for (int temp = 0; temp < futarList.getLength(); temp++) {
@@ -143,6 +149,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Vevők adatainak beolvasása és kiírása
     private static void readVevok(Document document) {
         NodeList vevoList = document.getElementsByTagName("Vevo");
         for (int temp = 0; temp < vevoList.getLength(); temp++) {
@@ -171,6 +178,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Rendelések adatainak beolvasása és kiírása
     private static void readRendelesek(Document document) {
         NodeList rendelesList = document.getElementsByTagName("Rendeles");
         for (int temp = 0; temp < rendelesList.getLength(); temp++) {
@@ -185,6 +193,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Pizzák adatainak beolvasása és kiírása
     private static void readPizzak(Document document) {
         NodeList pizzaList = document.getElementsByTagName("Pizza");
         for (int temp = 0; temp < pizzaList.getLength(); temp++) {
@@ -215,6 +224,7 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Bankkártyák adatainak beolvasása és kiírása
     private static void readBankkartyak(Document document) {
         NodeList bankkartyaList = document.getElementsByTagName("Bankkartya");
         for (int temp = 0; temp < bankkartyaList.getLength(); temp++) {
@@ -236,10 +246,12 @@ public class DOMReadEZ3YRC {
         }
     }
 
+    // Segédfüggvény az XML elemek kiírásához
     private static void printElement(String name, String value) {
         System.out.println("        <" + name + ">" + value + "</" + name + ">");
     }
 
+    // Segédfüggvény egy üres sor kiírásához a konzolon
     private static void printEmptyLine() {
         System.out.println();
     }
